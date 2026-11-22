@@ -295,7 +295,6 @@ public class Nc101aService {
      * Branches: 0, GOTO: 0, CALLs: 0
      */
     private void terminateCall(ProgramState state) {
-        return;
         // COBOL INSPT: INSPT.
         state.pOrF = "INSPT";
         // COBOL: COMPUTE INSPECT-COUNTER = INSPECT-COUNTER + 1
@@ -350,21 +349,13 @@ public class Nc101aService {
      */
     private void headRoutine(ProgramState state) {
         state.dummyRecord = toStr(state.ccvsH1);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.dummyRecord = toStr(state.ccvsH2a);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.dummyRecord = toStr(state.ccvsH2b);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.dummyRecord = toStr(state.ccvsH3);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
     }
 
     /**
@@ -375,9 +366,7 @@ public class Nc101aService {
         state.dummyRecord = toStr(state.ccvsC1);
         this.writeLine(state);
         state.dummyRecord = toStr(state.ccvsC2);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.dummyRecord = toStr(state.hyphenLine);
         this.writeLine(state);
     }
@@ -388,9 +377,7 @@ public class Nc101aService {
      */
     private void endRoutine(ProgramState state) {
         state.dummyRecord = toStr(state.hyphenLine);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
     }
 
     /**
@@ -399,9 +386,7 @@ public class Nc101aService {
      */
     private void endRtnExit(ProgramState state) {
         state.dummyRecord = toStr(state.ccvsE1);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
     }
 
     /**
@@ -480,21 +465,13 @@ public class Nc101aService {
             state.dummyRecord = "";
             // COBOL WRITE: WRITE DUMMY-RECORD AFTER ADVANCING PAGE
             state.dummyRecord = toStr(state.ccvsH1);
-            while (!(true)) {
-                this.wrtLn(state);
-            }
+            this.wrtLn(state);
             state.dummyRecord = toStr(state.ccvsH2a);
-            while (!(true)) {
-                this.wrtLn(state);
-            }
+            this.wrtLn(state);
             state.dummyRecord = toStr(state.ccvsH2b);
-            while (!(true)) {
-                this.wrtLn(state);
-            }
+            this.wrtLn(state);
             state.dummyRecord = toStr(state.ccvsH3);
-            while (!(true)) {
-                this.wrtLn(state);
-            }
+            this.wrtLn(state);
             state.dummyRecord = toStr(state.ccvsC1);
             this.wrtLn(state);
             state.dummyRecord = toStr(state.ccvsC2);
@@ -542,9 +519,7 @@ public class Nc101aService {
         state.infAnsiReference = toStr(state.ansiReference);
         state.infoText = "NO FURTHER INFORMATION, SEE PROGRAM.";
         state.dummyRecord = toStr(state.xxinfo);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.infAnsiReference = "";
         return; // COBOL GO TO FAIL-ROUTINE-EX
     }
@@ -558,9 +533,7 @@ public class Nc101aService {
         this.writeLine(state);
         state.corAnsiReference = toStr(state.ansiReference);
         state.printRec = toStr(state.testCorrect);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.corAnsiReference = "";
         // COBOL FAIL-ROUTINE-EX: FAIL-ROUTINE-EX.
     }
@@ -590,9 +563,7 @@ public class Nc101aService {
         state.xxcomputed = toStr(state.computedA);
         state.infAnsiReference = toStr(state.ansiReference);
         state.dummyRecord = toStr(state.xxinfo);
-        while (!(true)) {
-            this.writeLine(state);
-        }
+        this.writeLine(state);
         state.infAnsiReference = "";
         // COBOL BAIL-OUT-EX: BAIL-OUT-EX.
     }
@@ -1588,8 +1559,6 @@ public class Nc101aService {
     private void mpyTestF1130(ProgramState state) {
         // COBOL: COMPUTE WRK-DS-10V00 = WRK-DS-10V00 * A12THREES-DS-06V06
         state.wrkDs10v00 = toBd(state.wrkDs10v00).multiply(toBd(state.a12threesDs06v06));
-        this.mpyTestF1131(state); // COBOL GO TO MPY-TEST-F1-13-1
-        return;
         state.wrkXn00001 = "1";
         this.mpyTestF1131(state); // COBOL GO TO MPY-TEST-F1-13-1
         return;
@@ -1665,8 +1634,6 @@ public class Nc101aService {
     private void mpyTestF1140(ProgramState state) {
         // COBOL: COMPUTE WRK-DS-02V00 = WRK-DS-02V00 * AZERO-DS-05V05
         state.wrkDs02v00 = toBd(state.wrkDs02v00).multiply(toBd(state.azeroDs05v05));
-        this.mpyTestF1141(state); // COBOL GO TO MPY-TEST-F1-14-1
-        return;
         state.wrkXn00001 = "0";
         this.mpyTestF1141(state); // COBOL GO TO MPY-TEST-F1-14-1
         return;
@@ -2331,8 +2298,6 @@ public class Nc101aService {
     private void mpyTestF1200(ProgramState state) {
         // COBOL: COMPUTE WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-5V1-1
         state.wrkDu2v01 = toBd(state.wrkDu2v01);
-        this.mpyTestF1201(state); // COBOL GO TO MPY-TEST-F1-20-1
-        return;
         state.wrkXn00001 = "1";
         this.mpyTestF1201(state); // COBOL GO TO MPY-TEST-F1-20-1
         return;
@@ -2487,8 +2452,6 @@ public class Nc101aService {
     private void mpyTestF1210(ProgramState state) {
         // COBOL: COMPUTE WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-4P1-1
         state.wrkDu5v11 = toBd(state.wrkDu5v11);
-        this.mpyTestF1211(state); // COBOL GO TO MPY-TEST-F1-21-1
-        return;
         state.wrkXn00001 = "1";
         this.mpyTestF1211(state); // COBOL GO TO MPY-TEST-F1-21-1
         return;
@@ -3239,8 +3202,6 @@ public class Nc101aService {
     private void mpyTestF1260(ProgramState state) {
         // COBOL: COMPUTE WRK-DS-10V00 = WRK-DS-10V00 * A12THREES-DS-06V06
         state.wrkDs10v00 = toBd(state.wrkDs10v00).multiply(toBd(state.a12threesDs06v06));
-        this.mpyTestF12601(state); // COBOL GO TO MPY-TEST-F1-26-01
-        return;
         state.wrkXn00001 = "1";
         state.wrkDs05v00 = new BigDecimal("23");
         // COBOL MOVE: MOVE -4  TO WRK-DS-02V00
@@ -3392,8 +3353,6 @@ public class Nc101aService {
     private void mpyTestF1270(ProgramState state) {
         // COBOL: COMPUTE WRK-DS-02V00 = WRK-DS-02V00 * AZERO-DS-05V05
         state.wrkDs02v00 = toBd(state.wrkDs02v00).multiply(toBd(state.azeroDs05v05));
-        this.mpyTestF12701(state); // COBOL GO TO MPY-TEST-F1-27-01
-        return;
         state.wrkXn00001 = "0";
         state.wrkDs10v00 = new BigDecimal("23");
         // COBOL MOVE: MOVE -4  TO WRK-DS-01V00
