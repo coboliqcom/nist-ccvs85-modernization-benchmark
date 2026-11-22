@@ -1,0 +1,20 @@
+# Rust artifacts
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Java / Maven artifacts
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS / Temp
+.DS_Store
+Thumbs.db
+*.bak

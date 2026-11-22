@@ -1,0 +1,9 @@
+[package]
+name = "nc101a-safe-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Deterministic Safe Rust port of NIST CCVS85 NC101A (Fixed-Point Arithmetic, ROUNDED & SIZE ERROR) synthesized by CobolIQ"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# Zero external dependencies for maximum bare-metal speed and zero-alloc throughput!
