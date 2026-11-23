@@ -256,12 +256,169 @@ public class Nc101aService {
     public ReturnCodeResponse execute(ProgramState requestState) {
         ProgramState state = requestState != null ? requestState : new ProgramState();
         this.openFiles(state);
+        this.runAllTests(state);
+        this.ccvs999999(state);
         ReturnCodeResponse rc = new ReturnCodeResponse();
         rc.setCode("00");
         rc.setMessage("Executed NC101A");
         rc.setState(state);
         return rc;
     }
+
+    private void runAllTests(ProgramState state) {
+        this.mpyInitF11(state);
+        this.mpyTestF11(state);
+        this.mpyInitF12(state);
+        this.mpyTestF12(state);
+        this.mpyInitF131(state);
+        this.mpyTestF130(state);
+        this.mpyTestF131(state);
+        this.mpyTestF132(state);
+        this.mpyInitF141(state);
+        this.mpyTestF14O(state);
+        this.mpyTestF141(state);
+        this.mpyTestF142(state);
+        this.mpyInitF15(state);
+        this.mpyTestF150(state);
+        this.mpyTestF151(state);
+        this.mpyInitF16(state);
+        this.mpyTestF160(state);
+        this.mpyTestF161(state);
+        this.mpyInitF17(state);
+        this.mpyTestF170(state);
+        this.mpyTestF171(state);
+        this.mpyTestF172(state);
+        this.mpyInitF18(state);
+        this.mpyTestF180(state);
+        this.mpyTestF181(state);
+        this.mpyTestF182(state);
+        this.mpyInitF19(state);
+        this.mpyTestF190(state);
+        this.mpyTestF191(state);
+        this.mpyTestF192(state);
+        this.mpyInitF110(state);
+        this.mpyTestF1100(state);
+        this.mpyTestF1101(state);
+        this.mpyTestF1102(state);
+        this.mpyInitF111(state);
+        this.mpyTestF1110(state);
+        this.mpyTestF111(state);
+        this.mpyInitF112(state);
+        this.mpyTestF1120(state);
+        this.mpyTestF112(state);
+        this.mpyInitF113(state);
+        this.mpyTestF1130(state);
+        this.mpyTestF1131(state);
+        this.mpyTestF1132(state);
+        this.mpyInitF114(state);
+        this.mpyTestF1140(state);
+        this.mpyTestF1141(state);
+        this.mpyTestF1142(state);
+        this.mpyInitF115(state);
+        this.mpyTestF1150(state);
+        this.mpyTestF1151(state);
+        this.mpyTestF1152(state);
+        this.mpyInitF116(state);
+        this.mpyTestF1160(state);
+        this.mpyTestF1161(state);
+        this.mpyTestF1162(state);
+        this.mpyInitF117(state);
+        this.mpyTestF1170(state);
+        this.mpyTestF1171(state);
+        this.mpyTestF1172(state);
+        this.mpyTestF1173(state);
+        this.mpyTestF1174(state);
+        this.mpyTestF1175(state);
+        this.mpyInitF118(state);
+        this.mpyTestF1180(state);
+        this.mpyTestF1181(state);
+        this.mpyTestF1182(state);
+        this.mpyTestF1183(state);
+        this.mpyTestF1184(state);
+        this.mpyTestF1185(state);
+        this.mpyTestF1186(state);
+        this.mpyInitF119(state);
+        this.mpyTestF1190(state);
+        this.mpyTestF1191(state);
+        this.mpyTestF1192(state);
+        this.mpyTestF1193(state);
+        this.mpyTestF1194(state);
+        this.mpyTestF1195(state);
+        this.mpyTestF1196(state);
+        this.mpyInitF120(state);
+        this.mpyTestF1200(state);
+        this.mpyTestF1201(state);
+        this.mpyTestF1202(state);
+        this.mpyTestF1203(state);
+        this.mpyTestF1204(state);
+        this.mpyTestF1205(state);
+        this.mpyTestF1206(state);
+        this.mpyInitF121(state);
+        this.mpyTestF1210(state);
+        this.mpyTestF1211(state);
+        this.mpyTestF1212(state);
+        this.mpyTestF1213(state);
+        this.mpyTestF1214(state);
+        this.mpyTestF1215(state);
+        this.mpyTestF1216(state);
+        this.mpyInitF122(state);
+        this.mpyTestF1220(state);
+        this.mpyTestF1221(state);
+        this.mpyTestF1222(state);
+        this.mpyTestF1223(state);
+        this.mpyTestF1224(state);
+        this.mpyTestF1225(state);
+        this.mpyTestF1226(state);
+        this.mpyInitF123(state);
+        this.mpyTestF1230(state);
+        this.mpyTestF1231(state);
+        this.mpyTestF1232(state);
+        this.mpyTestF1233(state);
+        this.mpyTestF1234(state);
+        this.mpyTestF1235(state);
+        this.mpyTestF1236(state);
+        this.mpyInitF124(state);
+        this.mpyTestF1240(state);
+        this.mpyTestF1241(state);
+        this.mpyTestF1242(state);
+        this.mpyTestF1243(state);
+        this.mpyTestF1244(state);
+        this.mpyTestF1245(state);
+        this.mpyInitF125(state);
+        this.mpyTestF1250(state);
+        this.mpyTestF1251(state);
+        this.mpyTestF1252(state);
+        this.mpyTestF1253(state);
+        this.mpyTestF1254(state);
+        this.mpyTestF1255(state);
+        this.mpyInitF126(state);
+        this.mpyTestF1260(state);
+        this.mpyTestF12601(state);
+        this.mpyTestF1261(state);
+        this.mpyTestF1262(state);
+        this.mpyTestF1263(state);
+        this.mpyTestF1264(state);
+        this.mpyTestF1265(state);
+        this.mpyInitF127(state);
+        this.mpyTestF1270(state);
+        this.mpyTestF12701(state);
+        this.mpyTestF1271(state);
+        this.mpyTestF1272(state);
+        this.mpyTestF1273(state);
+        this.mpyTestF1274(state);
+        this.mpyTestF1275(state);
+        this.mpyInitF128(state);
+        this.mpyTestF1280(state);
+        this.mpyTestF1281(state);
+        this.mpyTestF1282(state);
+        this.mpyTestF1283(state);
+        this.mpyInitF129(state);
+        this.mpyTestF1290(state);
+        this.mpyTestF1291(state);
+        this.mpyTestF1292(state);
+        this.mpyTestF1293(state);
+    }
+
 
     /**
      * OPEN-FILES (PROCESS) - L318-323
@@ -294,6 +451,27 @@ public class Nc101aService {
      * TERMINATE-CALL (LEAF) - L328-334
      * Branches: 0, GOTO: 0, CALLs: 0
      */
+    private void inspt(ProgramState state) {
+        state.pOrF = "INSPT";
+        state.inspectCounter = toBd(state.inspectCounter).add(BigDecimal.ONE);
+    }
+
+    private void pass(ProgramState state) {
+        state.pOrF = "PASS ";
+        state.passCounter = toBd(state.passCounter).add(BigDecimal.ONE);
+    }
+
+    private void fail(ProgramState state) {
+        state.pOrF = "FAIL*";
+        state.errorCounter = toBd(state.errorCounter).add(BigDecimal.ONE);
+    }
+
+    private void deLete(ProgramState state) {
+        state.pOrF = "*****";
+        state.deleteCounter = toBd(state.deleteCounter).add(BigDecimal.ONE);
+        state.reMark = "****TEST DELETED****";
+    }
+
     private void terminateCall(ProgramState state) {
         // COBOL INSPT: INSPT.
         state.pOrF = "INSPT";
@@ -588,7 +766,7 @@ public class Nc101aService {
         state.mult1 = toBd(state.mult1).multiply(toBd(state.mult5));
         // COBOL IF: MULT1 EQUAL TO 320.48
         if (cmp(state.mult1, new BigDecimal("320.48")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF11(state); // COBOL GO TO MPY-FAIL-F1-1
             return;
@@ -612,7 +790,7 @@ public class Nc101aService {
      * Branches: 0, GOTO: 0, CALLs: 0
      */
     private void mpyFailF11(ProgramState state) {
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
         state.computedN = toBd(state.mult1);
         // COBOL MOVE: MOVE     +320.48 TO CORRECT-N.
     }
@@ -644,7 +822,7 @@ public class Nc101aService {
         state.mult4 = toBd(state.mult4).multiply(toBd(new BigDecimal("-1.3")));
         // COBOL IF: MULT4 EQUAL TO 73
         if (cmp(state.mult4, new BigDecimal("73")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF12(state); // COBOL GO TO MPY-FAIL-F1-2
             return;
@@ -668,7 +846,7 @@ public class Nc101aService {
      * Branches: 0, GOTO: 0, CALLs: 0
      */
     private void mpyFailF12(ProgramState state) {
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
         state.computedN = toBd(state.mult4);
         // COBOL MOVE: MOVE     +73   TO CORRECT-N.
     }
@@ -709,7 +887,7 @@ public class Nc101aService {
     private void mpyTestF131(ProgramState state) {
         // COBOL IF: XRAY EQUAL TO "K"
         if (cmp(state.xray, "K") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF131(state); // COBOL GO TO MPY-FAIL-F1-3-1
             return;
@@ -736,7 +914,7 @@ public class Nc101aService {
         state.computedX = toStr(state.xray);
         state.correctX = "A";
         state.reMark = "ON SIZE ERROR NOT EXECUTED";
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
     }
 
     /**
@@ -755,7 +933,7 @@ public class Nc101aService {
     private void mpyTestF132(ProgramState state) {
         // COBOL IF: MULT5 EQUAL TO 4
         if (cmp(state.mult5, new BigDecimal("4")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF132(state); // COBOL GO TO MPY-FAIL-F1-3-2
             return;
@@ -779,7 +957,7 @@ public class Nc101aService {
      * Branches: 0, GOTO: 0, CALLs: 0
      */
     private void mpyFailF132(ProgramState state) {
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
         state.computedN = toBd(state.mult5);
         // COBOL MOVE: MOVE    +4 TO CORRECT-N.
         state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
@@ -821,7 +999,7 @@ public class Nc101aService {
     private void mpyTestF141(ProgramState state) {
         // COBOL IF: XRAY EQUAL TO "L"
         if (cmp(state.xray, "L") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF141(state); // COBOL GO TO MPY-FAIL-F1-4-1
             return;
@@ -848,7 +1026,7 @@ public class Nc101aService {
         state.correctX = "L";
         state.computedX = toStr(state.xray);
         state.reMark = "ON SIZE ERROR NOT EXECUTED";
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
     }
 
     /**
@@ -867,7 +1045,7 @@ public class Nc101aService {
     private void mpyTestF142(ProgramState state) {
         // COBOL IF: MULT6 EQUAL TO 20
         if (cmp(state.mult6, new BigDecimal("20")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
         } else {
             this.mpyFailF142(state); // COBOL GO TO MPY-FAIL-F1-4-2
             return;
@@ -891,7 +1069,7 @@ public class Nc101aService {
      * Branches: 0, GOTO: 0, CALLs: 0
      */
     private void mpyFailF142(ProgramState state) {
-        // COBOL PERFORM: PERFORM  FAIL.
+        this.fail(state);
         state.computedN = toBd(state.mult6);
         // COBOL MOVE: MOVE     +20 TO CORRECT-N.
         state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
@@ -931,7 +1109,7 @@ public class Nc101aService {
     private void mpyTestF151(ProgramState state) {
         // COBOL IF: WRK-DS-18V00 EQUAL TO 000074073999999925
         if (cmp(state.wrkDs18v00, new BigDecimal("000074073999999925")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF15(state); // COBOL GO TO MPY-WRITE-F1-5
             return;
         }
@@ -956,7 +1134,7 @@ public class Nc101aService {
     private void mpyFailF15(ProgramState state) {
         state.correct18v0 = new BigDecimal("000074073999999925");
         state.computed18v0 = toBd(state.wrkDs18v00);
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -993,7 +1171,7 @@ public class Nc101aService {
     private void mpyTestF161(ProgramState state) {
         // COBOL IF: WRK-DS-12V00-S EQUAL TO 000008888889
         if (cmp(state.wrkDs12v00S, new BigDecimal("000008888889")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF16(state); // COBOL GO TO MPY-WRITE-F1-6
             return;
         }
@@ -1018,7 +1196,7 @@ public class Nc101aService {
     private void mpyFailF16(ProgramState state) {
         state.computed18v0 = toBd(state.wrkDs12v00S);
         state.correct18v0 = new BigDecimal("000008888889");
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -1057,7 +1235,7 @@ public class Nc101aService {
     private void mpyTestF171(ProgramState state) {
         // COBOL IF: WRK-DS-10V00 EQUAL TO 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF171(state); // COBOL GO TO MPY-WRITE-F1-7-1
             return;
         }
@@ -1083,7 +1261,7 @@ public class Nc101aService {
         state.computed18v0 = toBd(state.wrkDs10v00);
         state.correct18v0 = new BigDecimal("1111111111");
         state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -1102,14 +1280,14 @@ public class Nc101aService {
     private void mpyTestF172(ProgramState state) {
         // COBOL IF: WRK-XN-00001 EQUAL TO "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF172(state); // COBOL GO TO MPY-WRITE-F1-7-2
             return;
         }
         state.reMark = "ON SIZE ERROR NOT EXECUTED";
         state.correctA = "1";
         state.computedA = toStr(state.wrkXn00001);
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF172(state); // COBOL GO TO MPY-WRITE-F1-7-2
         return;
     }
@@ -1158,7 +1336,7 @@ public class Nc101aService {
     private void mpyTestF181(ProgramState state) {
         // COBOL IF: WRK-DS-02V00 EQUAL TO 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF181(state); // COBOL GO TO MPY-WRITE-F1-8-1
             return;
         }
@@ -1183,7 +1361,7 @@ public class Nc101aService {
     private void mpyFailF181(ProgramState state) {
         state.computedN = toBd(state.wrkDs02v00);
         state.correctN = new BigDecimal("00");
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -1202,14 +1380,14 @@ public class Nc101aService {
     private void mpyTestF182(ProgramState state) {
         // COBOL IF: WRK-XN-00001 EQUAL TO "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF182(state); // COBOL GO TO MPY-WRITE-F1-8-2
             return;
         }
         state.correctA = "1";
         state.computedA = toStr(state.wrkXn00001);
         state.reMark = "ON SIZE ERROR SHOULD NOT BE EXECUTED";
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF182(state); // COBOL GO TO MPY-WRITE-F1-8-2
         return;
     }
@@ -1258,7 +1436,7 @@ public class Nc101aService {
     private void mpyTestF191(ProgramState state) {
         // COBOL IF: WRK-DS-02V00 EQUAL TO -01
         if (cmp(state.wrkDs02v00, new BigDecimal("-01")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF191(state); // COBOL GO TO MPY-WRITE-F1-9-1
             return;
         }
@@ -1284,7 +1462,7 @@ public class Nc101aService {
         state.computedN = toBd(state.wrkDs02v00);
         // COBOL MOVE: MOVE  -01                TO CORRECT-N.
         state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -1303,14 +1481,14 @@ public class Nc101aService {
     private void mpyTestF192(ProgramState state) {
         // COBOL IF: WRK-XN-00001 EQUAL TO "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF192(state); // COBOL GO TO MPY-WRITE-F1-9-2
             return;
         }
         state.correctA = "1";
         state.computedA = toStr(state.wrkXn00001);
         state.reMark = "ON SIZE ERROR NOT EXECUTED";
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF192(state); // COBOL GO TO MPY-WRITE-F1-9-2
         return;
     }
@@ -1359,7 +1537,7 @@ public class Nc101aService {
     private void mpyTestF1101(ProgramState state) {
         // COBOL IF: WRK-DS-02V00 EQUAL TO -99
         if (cmp(state.wrkDs02v00, new BigDecimal("-99")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF1101(state); // COBOL GO TO MPY-WRITE-F1-10-1
             return;
         }
@@ -1384,7 +1562,7 @@ public class Nc101aService {
     private void mpyFailF1101(ProgramState state) {
         state.computedN = toBd(state.wrkDs02v00);
         // COBOL MOVE: MOVE  -99                TO CORRECT-N.
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
     }
 
     /**
@@ -1403,14 +1581,14 @@ public class Nc101aService {
     private void mpyTestF1102(ProgramState state) {
         // COBOL IF: WRK-XN-00001 EQUAL TO "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF1102(state); // COBOL GO TO MPY-WRITE-F1-10-2
             return;
         }
         state.correctA = "1";
         state.computedA = toStr(state.wrkXn00001);
         state.reMark = "ON SIZE ERROR SHOULD NOT BE EXECUTED";
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF1102(state); // COBOL GO TO MPY-WRITE-F1-10-2
         return;
     }
@@ -1458,13 +1636,13 @@ public class Nc101aService {
         state.wrkDs05v00 = toBd(state.wrkDs0201p);
         // COBOL IF: WRK-DS-05V00 EQUAL TO -00090
         if (cmp(state.wrkDs05v00, new BigDecimal("-00090")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF111(state); // COBOL GO TO MPY-WRITE-F1-11
             return;
         }
         // COBOL MOVE: MOVE -00090 TO CORRECT-N.
         state.computedN = toBd(state.wrkDs05v00);
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF111(state); // COBOL GO TO MPY-WRITE-F1-11
         return;
     }
@@ -1512,13 +1690,13 @@ public class Nc101aService {
         state.wrkDu18v00 = toBd(state.wrkCs18v00);
         // COBOL IF: WRK-DU-18V00 EQUAL TO 000000000111111111
         if (cmp(state.wrkDu18v00, new BigDecimal("000000000111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.mpyWriteF112(state); // COBOL GO TO MPY-WRITE-F1-12
             return;
         }
         state.correct18v0 = new BigDecimal("000000000111111111");
         state.computed18v0 = toBd(state.wrkDu18v00);
-        // COBOL PERFORM: PERFORM FAIL.
+        this.fail(state);
         this.mpyWriteF112(state); // COBOL GO TO MPY-WRITE-F1-12
         return;
     }
@@ -1560,8 +1738,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DS-10V00 = WRK-DS-10V00 * A12THREES-DS-06V06
         state.wrkDs10v00 = toBd(state.wrkDs10v00).multiply(toBd(state.a12threesDs06v06));
         state.wrkXn00001 = "1";
-        this.mpyTestF1131(state); // COBOL GO TO MPY-TEST-F1-13-1
-        return;
     }
 
     /**
@@ -1583,13 +1759,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-13-1";
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "0";
             state.reMark = "SIZE ERROR SHOULD HAVE OCCURRED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -1604,13 +1780,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-13-2";
         // COBOL IF: WRK-DS-10V00 = 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computed18v0 = toBd(state.wrkDs10v00);
             state.correct18v0 = new BigDecimal("1111111111");
             state.reMark = "SIZE ERROR SHOULD HAVE OCCURRED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -1635,8 +1811,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DS-02V00 = WRK-DS-02V00 * AZERO-DS-05V05
         state.wrkDs02v00 = toBd(state.wrkDs02v00).multiply(toBd(state.azeroDs05v05));
         state.wrkXn00001 = "0";
-        this.mpyTestF1141(state); // COBOL GO TO MPY-TEST-F1-14-1
-        return;
     }
 
     /**
@@ -1658,13 +1832,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-14-1";
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "0";
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -1679,12 +1853,12 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-14-2";
         // COBOL IF: WRK-DS-02V00 = 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("00");
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -1709,8 +1883,6 @@ public class Nc101aService {
         state.wrkDs10v00 = toBd(state.wrkDs10v00).multiply(toBd(state.a12threesDs06v06));
         state.wrkXn00001 = "1";
         state.wrkXn00001 = "2";
-        this.mpyTestF1151(state); // COBOL GO TO MPY-TEST-F1-15-1
-        return;
     }
 
     /**
@@ -1732,13 +1904,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-15-1";
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "1";
             state.reMark = "SIZE ERROR SHOULD HAVE OCCURRED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -1753,13 +1925,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-15-2";
         // COBOL IF: WRK-DS-10V00 = 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computed18v0 = toBd(state.wrkDs10v00);
             state.correct18v0 = new BigDecimal("1111111111");
             state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -1784,8 +1956,6 @@ public class Nc101aService {
         state.wrkDs02v00 = toBd(state.wrkDs02v00).multiply(toBd(state.azeroDs05v05));
         state.wrkXn00001 = "1";
         state.wrkXn00001 = "2";
-        this.mpyTestF1161(state); // COBOL GO TO MPY-TEST-F1-16-1
-        return;
     }
 
     /**
@@ -1807,13 +1977,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-16-1";
         // COBOL IF: WRK-XN-00001 = "2"
         if (cmp(state.wrkXn00001, "2") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "2";
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -1828,13 +1998,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-16-2";
         // COBOL IF: WRK-DS-02V00 = 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("00");
             state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -1858,8 +2028,6 @@ public class Nc101aService {
     private void mpyTestF1170(ProgramState state) {
         // COBOL: COMPUTE WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-4P1-1
         state.wrkDu5v11 = toBd(state.wrkDu5v11);
-        this.mpyTestF1171(state); // COBOL GO TO MPY-TEST-F1-17-1
-        return;
     }
 
     /**
@@ -1881,10 +2049,10 @@ public class Nc101aService {
     private void mpyTestF1171(ProgramState state) {
         // COBOL IF: WRK-DU-5V1-1 = .1
         if (cmp(state.wrkDu5v11, new BigDecimal("1")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu5v11);
             // COBOL MOVE: MOVE .1 TO CORRECT-N
             this.printDetail(state);
@@ -1900,10 +2068,10 @@ public class Nc101aService {
     private void mpyTestF1172(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -1919,10 +2087,10 @@ public class Nc101aService {
     private void mpyTestF1173(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 1
         if (cmp(state.wrkDu6v01, new BigDecimal("1")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("1");
             this.printDetail(state);
@@ -1938,10 +2106,10 @@ public class Nc101aService {
     private void mpyTestF1174(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -1957,10 +2125,10 @@ public class Nc101aService {
     private void mpyTestF1175(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = .0000000001
         if (cmp(state.wrkDu0v121, new BigDecimal("0000000001")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             // COBOL MOVE: MOVE .0000000001 TO CORRECT-0V18
             this.printDetail(state);
@@ -1992,8 +2160,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-5V1-1
         state.wrkDu2v01 = toBd(state.wrkDu2v01);
         state.wrkXn00001 = "1";
-        this.mpyTestF1181(state); // COBOL GO TO MPY-TEST-F1-18-1
-        return;
     }
 
     /**
@@ -2015,10 +2181,10 @@ public class Nc101aService {
     private void mpyTestF1181(ProgramState state) {
         // COBOL IF: WRK-DU-2V0-1 = 99
         if (cmp(state.wrkDu2v01, new BigDecimal("99")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2v01);
             state.correctN = new BigDecimal("99");
             this.printDetail(state);
@@ -2034,10 +2200,10 @@ public class Nc101aService {
     private void mpyTestF1182(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2053,10 +2219,10 @@ public class Nc101aService {
     private void mpyTestF1183(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2072,10 +2238,10 @@ public class Nc101aService {
     private void mpyTestF1184(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2091,10 +2257,10 @@ public class Nc101aService {
     private void mpyTestF1185(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = 0
         if (cmp(state.wrkDu0v121, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             state.correct0v18 = new BigDecimal("0");
             this.printDetail(state);
@@ -2110,7 +2276,7 @@ public class Nc101aService {
     private void mpyTestF1186(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "ON SIZE ERROR SHOULD HAVE EXECUTED";
@@ -2146,8 +2312,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-4P1-1
         state.wrkDu5v11 = toBd(state.wrkDu5v11);
         state.wrkXn00001 = "1";
-        this.mpyTestF1191(state); // COBOL GO TO MPY-TEST-F1-19-1
-        return;
     }
 
     /**
@@ -2169,10 +2333,10 @@ public class Nc101aService {
     private void mpyTestF1191(ProgramState state) {
         // COBOL IF: WRK-DU-5V1-1 = .1
         if (cmp(state.wrkDu5v11, new BigDecimal("1")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu5v11);
             // COBOL MOVE: MOVE .1 TO CORRECT-N
             this.printDetail(state);
@@ -2188,10 +2352,10 @@ public class Nc101aService {
     private void mpyTestF1192(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2207,10 +2371,10 @@ public class Nc101aService {
     private void mpyTestF1193(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2226,10 +2390,10 @@ public class Nc101aService {
     private void mpyTestF1194(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2245,10 +2409,10 @@ public class Nc101aService {
     private void mpyTestF1195(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = .0000000001
         if (cmp(state.wrkDu0v121, new BigDecimal("0000000001")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             // COBOL MOVE: MOVE .0000000001 TO CORRECT-0V18
             this.printDetail(state);
@@ -2264,7 +2428,7 @@ public class Nc101aService {
     private void mpyTestF1196(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "ON SIZE ERROR SHOULD NOT HAVE EXECUTED";
@@ -2299,8 +2463,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-2V0-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-5V1-1
         state.wrkDu2v01 = toBd(state.wrkDu2v01);
         state.wrkXn00001 = "1";
-        this.mpyTestF1201(state); // COBOL GO TO MPY-TEST-F1-20-1
-        return;
     }
 
     /**
@@ -2322,10 +2484,10 @@ public class Nc101aService {
     private void mpyTestF1201(ProgramState state) {
         // COBOL IF: WRK-DU-2V0-1 = 99
         if (cmp(state.wrkDu2v01, new BigDecimal("99")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2v01);
             state.correctN = new BigDecimal("99");
             this.printDetail(state);
@@ -2341,10 +2503,10 @@ public class Nc101aService {
     private void mpyTestF1202(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2360,10 +2522,10 @@ public class Nc101aService {
     private void mpyTestF1203(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2379,10 +2541,10 @@ public class Nc101aService {
     private void mpyTestF1204(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2398,10 +2560,10 @@ public class Nc101aService {
     private void mpyTestF1205(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = 0
         if (cmp(state.wrkDu0v121, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             state.correct0v18 = new BigDecimal("0");
             this.printDetail(state);
@@ -2417,7 +2579,7 @@ public class Nc101aService {
     private void mpyTestF1206(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "NOT ON SIZE ERROR SHOULD NOT HAVE EXECUTED";
@@ -2453,8 +2615,6 @@ public class Nc101aService {
         // COBOL: COMPUTE WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 = WRK-DU-5V1-1 WRK-DU-2P4-1 WRK-DU-6V0-1 WRK-DU-6V0-2 WRK-DU-0V12-1 * WRK-DU-4P1-1
         state.wrkDu5v11 = toBd(state.wrkDu5v11);
         state.wrkXn00001 = "1";
-        this.mpyTestF1211(state); // COBOL GO TO MPY-TEST-F1-21-1
-        return;
     }
 
     /**
@@ -2476,10 +2636,10 @@ public class Nc101aService {
     private void mpyTestF1211(ProgramState state) {
         // COBOL IF: WRK-DU-5V1-1 = .1
         if (cmp(state.wrkDu5v11, new BigDecimal("1")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu5v11);
             // COBOL MOVE: MOVE .1 TO CORRECT-N
             this.printDetail(state);
@@ -2495,10 +2655,10 @@ public class Nc101aService {
     private void mpyTestF1212(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2514,10 +2674,10 @@ public class Nc101aService {
     private void mpyTestF1213(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("1");
             this.printDetail(state);
@@ -2533,10 +2693,10 @@ public class Nc101aService {
     private void mpyTestF1214(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2552,10 +2712,10 @@ public class Nc101aService {
     private void mpyTestF1215(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = .0000000001
         if (cmp(state.wrkDu0v121, new BigDecimal("0000000001")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             // COBOL MOVE: MOVE .0000000001 TO CORRECT-0V18
             this.printDetail(state);
@@ -2571,7 +2731,7 @@ public class Nc101aService {
     private void mpyTestF1216(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "NOT ON SIZE ERROR SHOULD HAVE EXECUTED";
@@ -2607,8 +2767,6 @@ public class Nc101aService {
         state.wrkDu2v01 = toBd(state.wrkDu2v01);
         state.wrkXn00001 = "1";
         state.wrkXn00001 = "2";
-        this.mpyTestF1221(state); // COBOL GO TO MPY-TEST-F1-22-1
-        return;
     }
 
     /**
@@ -2630,10 +2788,10 @@ public class Nc101aService {
     private void mpyTestF1221(ProgramState state) {
         // COBOL IF: WRK-DU-5V1-1 = 12345.6
         if (cmp(state.wrkDu5v11, new BigDecimal("12345.6")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu5v11);
             state.correctN = new BigDecimal("12345.6");
             this.printDetail(state);
@@ -2649,10 +2807,10 @@ public class Nc101aService {
     private void mpyTestF1222(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2668,10 +2826,10 @@ public class Nc101aService {
     private void mpyTestF1223(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2687,10 +2845,10 @@ public class Nc101aService {
     private void mpyTestF1224(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2706,10 +2864,10 @@ public class Nc101aService {
     private void mpyTestF1225(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = 0
         if (cmp(state.wrkDu0v121, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             state.correct0v18 = new BigDecimal("0");
             this.printDetail(state);
@@ -2725,7 +2883,7 @@ public class Nc101aService {
     private void mpyTestF1226(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "ON SIZE ERROR SHOULD HAVE EXECUTED";
@@ -2762,8 +2920,6 @@ public class Nc101aService {
         state.wrkDu5v11 = toBd(state.wrkDu5v11);
         state.wrkXn00001 = "1";
         state.wrkXn00001 = "2";
-        this.mpyTestF1231(state); // COBOL GO TO MPY-TEST-F1-23-1
-        return;
     }
 
     /**
@@ -2785,10 +2941,10 @@ public class Nc101aService {
     private void mpyTestF1231(ProgramState state) {
         // COBOL IF: WRK-DU-5V1-1 = .1
         if (cmp(state.wrkDu5v11, new BigDecimal("1")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu5v11);
             // COBOL MOVE: MOVE .1 TO CORRECT-N
             this.printDetail(state);
@@ -2804,10 +2960,10 @@ public class Nc101aService {
     private void mpyTestF1232(ProgramState state) {
         // COBOL IF: WRK-DU-2P4-1 = 0
         if (cmp(state.wrkDu2p41, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu2p41);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2823,10 +2979,10 @@ public class Nc101aService {
     private void mpyTestF1233(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-1 = 0
         if (cmp(state.wrkDu6v01, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v01);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2842,10 +2998,10 @@ public class Nc101aService {
     private void mpyTestF1234(ProgramState state) {
         // COBOL IF: WRK-DU-6V0-2 = 0
         if (cmp(state.wrkDu6v02, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computedN = toBd(state.wrkDu6v02);
             state.correctN = new BigDecimal("0");
             this.printDetail(state);
@@ -2861,10 +3017,10 @@ public class Nc101aService {
     private void mpyTestF1235(ProgramState state) {
         // COBOL IF: WRK-DU-0V12-1 = .0000000001
         if (cmp(state.wrkDu0v121, new BigDecimal("0000000001")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             state.computed0v18 = toBd(state.wrkDu0v121);
             // COBOL MOVE: MOVE .0000000001 TO CORRECT-0V18
             this.printDetail(state);
@@ -2880,7 +3036,7 @@ public class Nc101aService {
     private void mpyTestF1236(ProgramState state) {
         // COBOL IF: WRK-XN-00001 = "2"
         if (cmp(state.wrkXn00001, "2") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.reMark = "NOT ON SIZE ERROR SHOULD HAVE EXECUTED";
@@ -2917,8 +3073,6 @@ public class Nc101aService {
         // COBOL MOVE: MOVE -4  TO WRK-DS-02V00
         // COBOL END-MULTIPLY: END-MULTIPLY
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1241(state); // COBOL GO TO MPY-TEST-F1-24-1
-        return;
     }
 
     /**
@@ -2940,13 +3094,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-24-1";
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "1";
             state.reMark = "ON SIZE ERROR NOT EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -2961,13 +3115,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-24-2";
         // COBOL IF: WRK-DS-05V00 = 23
         if (cmp(state.wrkDs05v00, new BigDecimal("23")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs05v00);
             state.correctN = new BigDecimal("23");
             state.reMark = "ON SIZE ERROR NOT EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -2982,13 +3136,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-24-3";
         // COBOL IF: WRK-DS-02V00 = -4
         if (cmp(state.wrkDs02v00, new BigDecimal("-4")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             // COBOL MOVE: MOVE   -4           TO CORRECT-N
             state.reMark = "ON SIZE ERROR NOT EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3003,13 +3157,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-24-4";
         // COBOL IF: WRK-DS-10V00 = 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computed18v0 = toBd(state.wrkDs10v00);
             state.correct18v0 = new BigDecimal("1111111111");
             state.reMark = "ON SIZE ERROR NOT EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3024,13 +3178,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-24-5";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -3062,8 +3216,6 @@ public class Nc101aService {
         // COBOL MOVE: MOVE -4  TO WRK-DS-01V00
         // COBOL END-MULTIPLY: END-MULTIPLY
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1251(state); // COBOL GO TO MPY-TEST-F1-25-1
-        return;
     }
 
     /**
@@ -3085,13 +3237,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-25-1";
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "1";
             state.reMark = "SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3106,13 +3258,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-25-2";
         // COBOL IF: WRK-DS-10V00 = 0000000000
         if (cmp(state.wrkDs10v00, new BigDecimal("0000000000")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs10v00);
             state.correctN = new BigDecimal("0000000000");
             state.reMark = "SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3127,13 +3279,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-25-3";
         // COBOL IF: WRK-DS-01V00 = 0
         if (cmp(state.wrkDs01v00, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs01v00);
             state.correctN = new BigDecimal("0");
             state.reMark = "SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3148,13 +3300,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-25-4";
         // COBOL IF: WRK-DS-02V00 = 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("00");
             state.reMark = "SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3169,13 +3321,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-25-5";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -3214,8 +3366,6 @@ public class Nc101aService {
      */
     private void mpyTestF12601(ProgramState state) {
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1261(state); // COBOL GO TO MPY-TEST-F1-26-1
-        return;
     }
 
     /**
@@ -3237,13 +3387,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-26-1";
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "0";
             state.reMark = "NOT ON SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3258,13 +3408,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-26-2";
         // COBOL IF: WRK-DS-05V00 = 00000
         if (cmp(state.wrkDs05v00, new BigDecimal("00000")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs05v00);
             state.correctN = new BigDecimal("0");
             state.reMark = "NOT ON SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3279,13 +3429,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-26-3";
         // COBOL IF: WRK-DS-02V00 = 0
         if (cmp(state.wrkDs02v00, BigDecimal.ZERO) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("0");
             state.reMark = "NOT ON SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3300,13 +3450,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-26-4";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3321,13 +3471,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-26-5";
         // COBOL IF: WRK-DS-10V00 = 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computed18v0 = toBd(state.wrkDs10v00);
             state.correct18v0 = new BigDecimal("1111111111");
             state.reMark = "NOT ON SIZE ERROR SHOULD NOT BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -3365,8 +3515,6 @@ public class Nc101aService {
      */
     private void mpyTestF12701(ProgramState state) {
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1271(state); // COBOL GO TO MPY-TEST-F1-27-1
-        return;
     }
 
     /**
@@ -3388,13 +3536,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-27-1";
         // COBOL IF: WRK-XN-00001 = "0"
         if (cmp(state.wrkXn00001, "0") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "0";
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3409,13 +3557,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-27-2";
         // COBOL IF: WRK-DS-10V00 = 23
         if (cmp(state.wrkDs10v00, new BigDecimal("23")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs10v00);
             state.correctN = new BigDecimal("23");
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3430,13 +3578,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-27-3";
         // COBOL IF: WRK-DS-02V00 = 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("00");
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3451,13 +3599,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-27-4";
         // COBOL IF: WRK-DS-01V00 = -4
         if (cmp(state.wrkDs01v00, new BigDecimal("-4")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs01v00);
             // COBOL MOVE: MOVE   -4           TO CORRECT-N
             state.reMark = "NOT ON SIZE ERROR SHOULD BE EXECUTED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3472,13 +3620,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-27-5";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -3505,8 +3653,6 @@ public class Nc101aService {
         state.wrkXn00001 = "2";
         // COBOL END-MULTIPLY: END-MULTIPLY
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1281(state); // COBOL GO TO MPY-TEST-F1-28-1
-        return;
     }
 
     /**
@@ -3528,13 +3674,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-28-1";
         // COBOL IF: WRK-XN-00001 = "1"
         if (cmp(state.wrkXn00001, "1") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "1";
             state.reMark = "SIZE ERROR SHOULD HAVE OCCURRED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3549,13 +3695,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-28-2";
         // COBOL IF: WRK-DS-10V00 = 1111111111
         if (cmp(state.wrkDs10v00, new BigDecimal("1111111111")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computed18v0 = toBd(state.wrkDs10v00);
             state.correct18v0 = new BigDecimal("1111111111");
             state.reMark = "SIZE ERROR SHOULD HAVE OCCURRED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3570,13 +3716,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-28-3";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
@@ -3603,8 +3749,6 @@ public class Nc101aService {
         state.wrkXn00001 = "2";
         // COBOL END-MULTIPLY: END-MULTIPLY
         state.wrkCs18v00 = new BigDecimal("99");
-        this.mpyTestF1291(state); // COBOL GO TO MPY-TEST-F1-29-1
-        return;
     }
 
     /**
@@ -3625,13 +3769,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-29-1";
         // COBOL IF: WRK-XN-00001 = "2"
         if (cmp(state.wrkXn00001, "2") == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedX = toStr(state.wrkXn00001);
             state.correctX = "2";
             state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3646,13 +3790,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-29-2";
         // COBOL IF: WRK-DS-02V00 = 00
         if (cmp(state.wrkDs02v00, new BigDecimal("00")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkDs02v00);
             state.correctN = new BigDecimal("00");
             state.reMark = "WRONGLY AFFECTED BY SIZE ERROR";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
         // COBOL: COMPUTE REC-CT = REC-CT + 1
@@ -3667,13 +3811,13 @@ public class Nc101aService {
         state.parName = "MPY-TEST-F1-29-3";
         // COBOL IF: WRK-CS-18V00 = 000000000000000099
         if (cmp(state.wrkCs18v00, new BigDecimal("000000000000000099")) == 0) {
-            // COBOL PERFORM: PERFORM PASS
+            this.pass(state);
             this.printDetail(state);
         } else {
             state.computedN = toBd(state.wrkCs18v00);
             state.correctN = new BigDecimal("000000000000000099");
             state.reMark = "SCOPE TERMINATOR IGNORED";
-            // COBOL PERFORM: PERFORM FAIL
+            this.fail(state);
             this.printDetail(state);
         }
     }
