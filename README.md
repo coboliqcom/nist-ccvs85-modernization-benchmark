@@ -9,14 +9,14 @@
 
 ---
 
-## 🎬 Viral Showcase: King Cobalt on Calculation Drift
+## 🎬 Viral Showcase: King Cobol on Calculation Drift
 
 <div align="center">
   <video src="media/wishes.mp4" controls="controls" poster="media/king_cobol_poster.jpg" style="max-width: 100%; border-radius: 8px;">
-    <a href="media/wishes.mp4"><img src="media/king_cobol_poster.jpg" alt="King Cobalt: Calculation Drift & Holiday Wishes from Poland" width="100%" /></a>
+    <a href="media/wishes.mp4"><img src="media/king_cobol_poster.jpg" alt="King Cobol: Calculation Drift & Holiday Wishes from Poland" width="100%" /></a>
   </video>
   <p>
-    <em>👑 <strong>King Cobalt (The Mainframe King):</strong> "Don't calculate in Java. You will get drifts. Cheers from Poland! We wish you flawless calculations and a Happy New Year!"</em><br>
+    <em>👑 <strong>King Cobol (The Mainframe King):</strong> "Don't calculate in Java. You will get drifts. Cheers from Poland! We wish you flawless calculations and a Happy New Year!"</em><br>
     <strong><a href="media/wishes.mp4">▶️ Watch Video (media/wishes.mp4)</a></strong>
   </p>
 </div>
@@ -24,11 +24,11 @@
 <details>
 <summary><b>📜 Click to expand Video Transcript (English & Polish)</b></summary>
 
-> **King Cobalt:** *"Don't calculate in Java. You will get drifts. Cheers from Poland. We wish you flawless calculations, and we send you holiday and New Year wishes for the new year."*  
+> **King Cobol:** *"Don't calculate in Java. You will get drifts. Cheers from Poland. We wish you flawless calculations, and we send you holiday and New Year wishes for the new year."*  
 > *(PL: Nie obliczaj w Javie. Będziesz mieć dryfy. Pozdrowienia z Polski. Życzymy ci bezbłędnych obliczeń i przesyłamy ci życzenia z okazji świąt i Nowego Roku w nowym roku.)*
 >
-> *"You want to see real speed? Look at King Cobalt calculating on zOS. While Java is still compiling overhead, my mainframe processes billions of transactions instantly. Now, if you calculate in Spring Boot or Java, the cents will start not matching up. You'll have calculation drift. Don't use something that is not deterministic!"*  
-> *(PL: Chcesz zobaczyć prawdziwą prędkość? Spójrz, jak King Cobalt oblicza na zOS, podczas gdy Java nadal kompiluje się w trybie overhead, moja płyta główna przetwarza miliardy transakcji natychmiast. A teraz, jeśli obliczysz to w Spring Boot lub Java, centy zaczną się nie zgadzać. Będziesz mieć dryf obliczeń. Nie używaj czegoś, co nie jest deterministyczne!)*
+> *"You want to see real speed? Look at King Cobol calculating on zOS. While Java is still compiling overhead, my mainframe processes billions of transactions instantly. Now, if you calculate in Spring Boot or Java, the cents will start not matching up. You'll have calculation drift. Don't use something that is not deterministic!"*  
+> *(PL: Chcesz zobaczyć prawdziwą prędkość? Spójrz, jak King Cobol oblicza na zOS, podczas gdy Java nadal kompiluje się w trybie overhead, moja płyta główna przetwarza miliardy transakcji natychmiast. A teraz, jeśli obliczysz to w Spring Boot lub Java, centy zaczną się nie zgadzać. Będziesz mieć dryf obliczeń. Nie używaj czegoś, co nie jest deterministyczne!)*
 
 </details>
 
