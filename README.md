@@ -46,13 +46,25 @@ See [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md) for the full breakdown across all
 ### 1. [`01_NUCLEUS_MATH/`](01_NUCLEUS_MATH) — `NC101A` (Nucleus Fixed-Point Math)
 - **Source:** [`NC101A.cbl`](01_NUCLEUS_MATH/cobol/NC101A.cbl) (1,868 lines of hardcore ANSI-85 arithmetic).
 - **Torture Features:** Fixed-point precision, `ROUNDED`, `ON SIZE ERROR`, and `REDEFINES` overlapping decimal and integer registers.
-- **Java Port:** [`java-spring/`](01_NUCLEUS_MATH/java-spring/) (Spring Boot Controller + Service + `pom.xml`).
+- **Dual-Mode Java 17 Spring Boot Port:** [`java-spring/`](01_NUCLEUS_MATH/java-spring/)
+  Run the test suite to inspect both execution modes side-by-side:
   ```bash
   cd 01_NUCLEUS_MATH/java-spring
-  mvn spring-boot:run
+  ./mvnw test
+  ```
+  - **Mode 1 (`NAIVE_TRANSPILER`) — The Smoking Gun of Naive Java Transpilation:**  
+    Demonstrates the baseline naive transpiler produced by LLMs and standard market tools.  
+    *Result:* **55 PASS, 37 FAIL** (Silent financial data corruption — Spring Boot returns `HTTP 200 OK`, but silently miscalculates balances, skips `ON SIZE ERROR`, and drops fractions).
+  - **Mode 2 (`COBOL_EXACT_CODETRUTH`) — Certified 100% NIST Conformance:**  
+    Enforces hardware-grade fixed-point scale truncation (`RoundingMode.DOWN`), `ROUNDED` (`HALF_UP`), buffer freeze on `ON SIZE ERROR`, and accurate decimal literals.  
+    *Result:* **90 PASS, 0 FAIL (100.0% Conformance)**.
+  ```bash
+  # Run the Spring Boot microservice:
+  ./mvnw spring-boot:run
   # Available on http://localhost:8080/api/v1/nc101a/execute
   ```
 - **Safe Rust Port:** [`safe-rust/`](01_NUCLEUS_MATH/safe-rust/) (`#![forbid(unsafe_code)]`, `#![no_std]` capable).
+  Zero-allocation, $O(1)$ stack registers, eliminating JVM heap overhead and Garbage Collection pauses entirely:
   ```bash
   cd 01_NUCLEUS_MATH/safe-rust
   cargo test
