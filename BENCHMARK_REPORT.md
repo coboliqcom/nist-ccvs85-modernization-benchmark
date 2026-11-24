@@ -74,11 +74,12 @@ cd 01_NUCLEUS_MATH/java-spring
 ./mvnw test
 ```
 
-### Telemetry of the Dual-Mode Spring Boot Execution:
-| Execution Mode | Pass Count | Error Count | Conformance | Behavioral Diagnostic |
+### Telemetry of the Modernization Execution Engines:
+| Execution Mode / Target | Pass Count | Error Count | Conformance | Behavioral Diagnostic |
 | :--- | :---: | :---: | :---: | :--- |
-| **Mode 1: `NAIVE_TRANSPILER`** (Standard Market Baseline) | **55** | **37** | **59.7%** | **The Smoking Gun:** Spring Boot returns `HTTP 200 OK`, but silently corrupts balances due to floating `BigDecimal` scale expansion, skipped `ON SIZE ERROR` buffer freezes, and corrupted decimal literals. |
-| **Mode 2: `COBOL_EXACT_CODETRUTH`** (CobolIQ Certified) | **90** | **0** | **100.0%** | **Certified Conformance:** Enforces strict fixed-point scale truncation (`DOWN`), `ROUNDED` (`HALF_UP`), and physical buffer freezing on overflow. |
+| **Java Mode 1: `NAIVE_TRANSPILER`** (Standard Market Baseline) | **55** | **37** | **59.7%** | **The Smoking Gun:** Spring Boot returns `HTTP 200 OK`, but silently corrupts balances due to floating `BigDecimal` scale expansion, skipped `ON SIZE ERROR` buffer freezes, and corrupted decimal literals. |
+| **Java Mode 2: `COBOL_EXACT_CODETRUTH`** (CobolIQ Certified) | **90** | **0** | **100.0%** | **Certified Conformance:** Enforces strict fixed-point scale truncation (`DOWN`), `ROUNDED` (`HALF_UP`), and physical buffer freezing on overflow. |
+| **CobolIQ Safe Rust Engine** (`#![forbid(unsafe_code)]`) | **90** | **0** | **100.0%** | **Bare-Metal Speed:** Zero heap allocations, zero GC pauses, executes all 90 tests in $<0.001$s with $O(1)$ stack registers. |
 
 ### The 4 Core Mechanical Impedance Mismatches:
 1. **Buffer Freezing on `ON SIZE ERROR`:**

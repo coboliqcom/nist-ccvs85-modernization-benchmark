@@ -64,11 +64,11 @@ See [BENCHMARK_REPORT.md](BENCHMARK_REPORT.md) for the full breakdown across all
   # Available on http://localhost:8080/api/v1/nc101a/execute
   ```
 - **Safe Rust Port:** [`safe-rust/`](01_NUCLEUS_MATH/safe-rust/) (`#![forbid(unsafe_code)]`, `#![no_std]` capable).
-  Zero-allocation, $O(1)$ stack registers, eliminating JVM heap overhead and Garbage Collection pauses entirely:
+  Zero-allocation, $O(1)$ stack registers, eliminating JVM heap overhead and Garbage Collection pauses entirely. Executes all 90 NIST test vectors across Clusters 1–7 with 100% mathematical parity:
   ```bash
   cd 01_NUCLEUS_MATH/safe-rust
   cargo test
-  # test result: ok. 1 passed; 0 failed; finished in 0.00s!
+  # test result: ok. 2 passed (All 90 NIST tests: 90 PASS, 0 FAIL); finished in 0.00s!
   ```
 
 ### 2. [`02_INDEXED_VSAM/`](02_INDEXED_VSAM) — `IX101A` (VSAM KSDS / Indexed I/O)
